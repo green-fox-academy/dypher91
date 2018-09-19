@@ -1,0 +1,9 @@
+odkaz   <a href="https://www.greenfoxacademy.com">Green fox academy.</a> //odkaz na url, nazev odkaz
+
+obrazek <img src="earth.gif"> //obrazek musi byt ve slozce s html
+
+video z webu  <iframe width="560" height="315" src="https://www.youtube.com/embed/1oMxrHXzOsY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> //lze zkopirovat primo z youtube, klik na sdilet a embeded(<>)
+
+
+
+T R L B paddings mark
