@@ -23,15 +23,13 @@ public class MultiplicationTable {
         int one = number.nextInt();
         System.out.println("The number you want to multicipate");
         int sec = number.nextInt();
-
+        //better version
 
         for (int i = 1; i < one+1; i++) {
             int result = i * sec;
 
-           // for (int j = 0; j < i; j++) {
+              System.out.println(i + " * " + sec + " = " + result);
 
-                System.out.println(i + " * " + sec + " = " + result);
-           // }
         }
     }
 }
