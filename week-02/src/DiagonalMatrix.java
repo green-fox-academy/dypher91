@@ -1,26 +1,34 @@
 public class DiagonalMatrix {
     public static void main(String[] args) {
+        // - Create (dynamically) a two dimensional array
+        //   with the following matrix. Use a loop!
+        //
+        //   1 0 0 0
+        //   0 1 0 0
+        //   0 0 1 0
+        //   0 0 0 1
+        //
+        // - Print this two dimensional array to the output
 
-        //String[][] multiDArray = new String[3][3];
-        int [][] multiDArray = {{0,1},{0,1}};
-
-        /*for(int i = 0; i < multiDArray.length; i++)
-
-        {
-            for(int j = 0; j < multiDArray[i].length; j++)
-
-            {
-
-
-
-                multiDArray[i][j] = i + " " + j;
-
-
-
+        int[][] multi = new int[4][4];
+        int i, j;
+        for (i = 0; i < multi.length; i++) {
+            for (j = 0; j <= i; j++) {
+                if (i == j) {
+                    multi[i][j] = 1;
+                } else {
+                    multi[i][j] = 0;
+                }
             }
-        }*/
-        System.out.println(multiDArray);
+        }
 
+        for (i = 0; i < multi.length; i++) {
+            for (j = 0; j < multi.length; j++) {
+
+                System.out.print(multi[i][j]);
+            }
+            System.out.println();
+        }
 
     }
 }
