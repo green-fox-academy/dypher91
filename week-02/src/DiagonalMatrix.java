@@ -10,22 +10,22 @@ public class DiagonalMatrix {
         //
         // - Print this two dimensional array to the output
 
-        int[][] multi = new int[4][4];
+        int[][] matrix = new int[4][4];
         int i, j;
-        for (i = 0; i < multi.length; i++) {
+        for (i = 0; i < matrix.length; i++) {
             for (j = 0; j <= i; j++) {
                 if (i == j) {
-                    multi[i][j] = 1;
+                    matrix[i][j] = 1;
                 } else {
-                    multi[i][j] = 0;
+                    matrix[i][j] = 0;
                 }
             }
         }
 
-        for (i = 0; i < multi.length; i++) {
-            for (j = 0; j < multi.length; j++) {
+        for (i = 0; i < matrix.length; i++) {
+            for (j = 0; j < matrix.length; j++) {
 
-                System.out.print(multi[i][j]);
+                System.out.print(matrix[i][j]);
             }
             System.out.println();
         }
