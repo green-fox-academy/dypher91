@@ -1,3 +1,4 @@
+import java.awt.Color;
 public class Colours {
     public static void main(String[] args) {
 
@@ -18,7 +19,8 @@ public class Colours {
             for (int i = 0; i < colors.length; i++) {
                 for (int j = 0; j < colors[i].length; j++) {
 
-                    System.out.print(colors[i] [j]+ " ");
+                    System.out.print("\u001B[34m"+ colors[i] [j]+ " ");
+
 
                 }
                 System.out.println();
