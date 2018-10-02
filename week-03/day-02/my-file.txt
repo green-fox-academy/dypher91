@@ -1,0 +1,7 @@
+boolean
+char
+int
+byte
+short
+double
+long
