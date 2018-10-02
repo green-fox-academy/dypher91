@@ -16,7 +16,6 @@ public class CountLines {
     public static void countLines() throws IOException {
         Path mySecPath = Paths.get("my-file.txt");
 
-        //if I don't create the file, by the line below, than exception catch it
         Files.write(mySecPath, "boolean\nchar\nint\nbyte\nshort\ndouble\nlong".getBytes());
 
         int count=0;
@@ -30,7 +29,7 @@ public class CountLines {
             } System.out.println(count);
 
         } catch (IOException e) {
-            System.out.println("Unable to read file: " +mySecPath);
+            System.out.println("0");
         }
     }
 

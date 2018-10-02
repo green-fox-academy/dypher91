@@ -14,7 +14,6 @@ public class PrintEachLine {
     public static void openFile() throws IOException {
         Path mySecPath = Paths.get("my-file.txt");
 
-        //if I don't create the file, by the line below, than exception catch it
         Files.write(mySecPath, "boolean\nchar\nint\nbyte\nshort\ndouble\nlong".getBytes());
 
         try {
