@@ -1,7 +1,2 @@
-boolean
-char
-int
-byte
-short
-double
-long
+
+      teaching-materials/workshop/file-manipulations/logs/log.txt
