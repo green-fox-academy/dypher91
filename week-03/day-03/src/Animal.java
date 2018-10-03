@@ -33,7 +33,7 @@ public class Animal {
         animal.play();
         System.out.println(animal.hunger +" "+animal.thirst);
 
-        
+
     }
 
 
