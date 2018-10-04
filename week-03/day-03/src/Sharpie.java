@@ -40,7 +40,7 @@ public class Sharpie {
         System.out.println(blue.color);
 
         sharpies.checkSharpies();
-  
+
 
 
     }
