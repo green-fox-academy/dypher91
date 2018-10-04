@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class SquareFractals {
+public class DrawSquareFractals {
     public static void mainDraw(Graphics graphics) {
         int size = 320;
         int xStart = 0;

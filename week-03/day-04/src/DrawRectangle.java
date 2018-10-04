@@ -12,7 +12,7 @@ class DrawRectangle {
 
     }
 
-    
+
 
     // Don't touch the code below
     static int WIDTH = 320;
