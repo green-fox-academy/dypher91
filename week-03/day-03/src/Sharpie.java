@@ -40,9 +40,7 @@ public class Sharpie {
         System.out.println(blue.color);
 
         sharpies.checkSharpies();
-      //  sharpies.removeTrash();
-      //  sharpies.checkSharpies();
-      //  System.out.println(sharpies.countUsable());
+  
 
 
     }
