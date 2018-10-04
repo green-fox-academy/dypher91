@@ -5,7 +5,7 @@ public class String1 {
         String something = "yyyyxxxxxyyyyy";
         System.out.println(something + " do magic... " + changeX(something));
 
-         }
+        }
 
     public static String changeX(String something){
         if(something.length() == 0){
