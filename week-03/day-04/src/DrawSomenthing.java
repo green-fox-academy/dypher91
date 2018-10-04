@@ -7,7 +7,7 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 class DrawSomething {
     public static void mainDraw(Graphics graphics) {
         // Draw a box that has different colored lines on each edge.
-
+    graphics.drawRect(0,0,50,50);
 
 
     }
