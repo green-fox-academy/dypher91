@@ -1,30 +1,30 @@
 import javax.swing.*;
 
 import java.awt.*;
+import java.util.Scanner;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-
-
-public class ColoredBox {
-
-
+public class GoToCenter {
     public static void mainDraw(Graphics graphics) {
-        // Draw a box that has different colored lines on each edge.
-
-        graphics.setColor(Color.GREEN);
-        graphics.drawLine(10,50,100,50);
-
-        graphics.setColor(Color.RED);
-        graphics.drawLine(10,100,100,100);
-
-        graphics.setColor(Color.blue);
-        graphics.drawLine(10,50,10,100);
-
-        graphics.setColor(Color.BLACK);
-        graphics.drawLine(100,50,100,100);
+        // Create a line drawing function that takes 2 parameters:
+        // The x and y coordinates of the line's starting point
+        // and draws a line from that point to the center of the canvas.
+        // Draw 3 lines with that function. Use loop for that.
 
 
+        int inputX = 10;
+        int inputY = 300;
+        goToCenter(inputX,inputY,graphics);
+
+
+    }
+    public static void goToCenter(int x, int y, Graphics graphics){
+        for (int i = 1; i < 3; i++) {
+            graphics.drawLine(x,y,WIDTH/2,HEIGHT/2);
+            x+= 150;
+            y+= 100;
+        }
 
 
     }
