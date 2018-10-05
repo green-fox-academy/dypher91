@@ -26,7 +26,7 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
         public static void drawRectanglesWithRecursion(int initialX, int initialY, int size, Graphics graphics){
             drawRectangles(initialX,initialY,size,graphics);
-            if (size > 3){
+            if (size > 1){
 
                 drawRectanglesWithRecursion(initialX+size/3,initialY-size/3*2,size/3,graphics);
                 drawRectanglesWithRecursion(initialX-size/3*2,initialY + size/3,size/3,graphics);
@@ -46,7 +46,6 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 
         }
-
 
 
         // Don't touch the code below
