@@ -35,6 +35,7 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
                 drawCircleslesWithRecursion(initialX+size/4,initialY,size/2,graphics);
                 drawCircleslesWithRecursion(initialX,initialY+size/4,size/2,graphics);
                 drawCircleslesWithRecursion(initialX+size/2,initialY+size/4,size/2,graphics);
+                
 
             }
 
