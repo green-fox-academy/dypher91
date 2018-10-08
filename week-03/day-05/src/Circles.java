@@ -24,18 +24,17 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
         public static void drawCircles(int initialX, int initialY, int size, Graphics graphics){
             Random random = new Random();
-            //graphics.setColor(new Color(random.nextInt(255),random.nextInt(255),random.nextInt(255),random.nextInt(255)));
-            graphics.setColor(Color.BLACK);
+            graphics.setColor(new Color(random.nextInt(255),random.nextInt(255),random.nextInt(255),random.nextInt(255)));
+           // graphics.setColor(Color.BLACK);
             graphics.drawOval(initialX,initialY,size,size);
         }
 
         public static void drawCircleslesWithRecursion(int initialX, int initialY, int size, Graphics graphics){
             drawCircles(initialX,initialY,size,graphics);
-            if (size > +40){
+            if (size > 50){
                 drawCircleslesWithRecursion(initialX+size/4,initialY,size/2,graphics);
                 drawCircleslesWithRecursion(initialX,initialY+size/4,size/2,graphics);
                 drawCircleslesWithRecursion(initialX+size/2,initialY+size/4,size/2,graphics);
-                
 
             }
 
@@ -43,8 +42,8 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
         }
 
         // Don't touch the code below
-        static int WIDTH = 500;
-        static int HEIGHT = 500;
+        static int WIDTH = 600;
+        static int HEIGHT = 600;
 
         public static void main(String[] args) {
             JFrame jFrame = new JFrame("Drawing");

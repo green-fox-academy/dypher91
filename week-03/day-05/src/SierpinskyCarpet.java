@@ -9,8 +9,8 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
     public class SierpinskyCarpet {
 
         public static void mainDraw(Graphics graphics) {
-            int initialX = WIDTH*2/3;
-            int initialY = HEIGHT*2/3;
+            int initialX = WIDTH/3;
+            int initialY = HEIGHT/3;
             int size = WIDTH/3;
           //  drawRectangles(initialX,initialY,size,graphics);
             drawRectanglesWithRecursion(initialX,initialY,size,graphics);
@@ -41,9 +41,6 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
                 drawRectanglesWithRecursion(initialX+size/3*4,initialY - size/3*2,size/3,graphics);
 
                 }
-
-
-
 
         }
 
