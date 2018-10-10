@@ -1,6 +1,7 @@
 package main.java.music;
 
 public abstract class StringedInstrument extends Instrument {
+
     int numberOfString;
 
     public StringedInstrument(String name, int numberOfString) {
