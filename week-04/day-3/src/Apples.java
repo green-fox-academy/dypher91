@@ -1,6 +1,6 @@
 public class Apples {
 
-    public String getApples(){
+    public String getApple(){
         return "apple";
     }
 

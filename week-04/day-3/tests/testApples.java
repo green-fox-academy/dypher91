@@ -2,12 +2,12 @@ import org.testng.annotations.Test;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-public class test_01 {
+public class testApples {
 
     @Test
     public void testGetApple(){
-        Apples apples = new Apples();
-        assertEquals("apple",apples.getApples());
+        Apples apple = new Apples();
+        assertEquals("apple",apple.getApple());
     }
 
 }
