@@ -1,14 +1,12 @@
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.*;
+
 
 public class testSum {
-
-
-    @Test
+        @Test
     public void testGetSum() {
         ArrayList<Integer> list = new ArrayList<>();
         list.add(0,10);
@@ -26,12 +24,4 @@ public class testSum {
 
         assertEquals(0,result_2.getSum(list_2));
     }
-    @Test
-    public void test_3_getSum(){
-        Sum result_3 = new Sum();
-
-        assertEquals(0,result_3.getSum());
-    }
-
-
 }

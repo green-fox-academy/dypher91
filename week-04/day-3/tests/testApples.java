@@ -1,6 +1,5 @@
-import org.testng.annotations.Test;
-
-import static org.testng.AssertJUnit.assertEquals;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 public class testApples {
 
@@ -9,5 +8,4 @@ public class testApples {
         Apples apple = new Apples();
         assertEquals("apple",apple.getApple());
     }
-
 }
