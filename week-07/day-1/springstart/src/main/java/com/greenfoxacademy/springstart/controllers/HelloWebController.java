@@ -18,6 +18,7 @@ public class HelloWebController {
     public String greeting(@RequestParam(value = "name", defaultValue = "Your name") String name ,Model model) {
         model.addAttribute("name", name);
         model.addAttribute("counter",counter.incrementAndGet());
+
         return "greeting";
     }
 }
