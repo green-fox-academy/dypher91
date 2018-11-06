@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bank information</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<table th:border="${borderSize}" bgcolor="blue" align="center">
+        <tr th:style="'color : white'" >
+            <th>#</th>
+            <th>Name</th>
+            <th>Balance</th>
+            <th>Type</th>
+            <th>Status</th>
+        </tr>
+
+        <tr th:each= "account, indexRows : ${animalList}"th:style="${account.animalType} == 'king' ?  'color : gold' : 'color : white'">
+            <td th:text="${indexRows.count}" th:style="'font-weight: bold'"></td>
+            <td th:text="${account.name}"></td>
+            <td th:text="${account.balance} +' '+ ${account.currency}" ></td>
+            <td th:text="${account.animalType}"  ></td>
+            <td th:text="${account.status}"></td>
+        </tr>
+</table>
+
+<form action="#" th:action="@{/increasebalance}" method="post" align="center">
+    <p><input type="submit" value="Increase balance" /></p>
+</form>
+
+</body>
+</html>
