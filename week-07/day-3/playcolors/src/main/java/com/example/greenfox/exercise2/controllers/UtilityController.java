@@ -4,10 +4,7 @@ import com.example.greenfox.exercise2.Utility;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class UtilityController {
@@ -35,6 +32,24 @@ public class UtilityController {
             model.addAttribute("randColor", utility.randomColor());
             return "useful";
         }
+    @RequestMapping(value = "/useful/email")
+    public String email(@RequestParam(value = "email") String email, Model model) {
+        model.addAttribute("emailAddress", email);
+        model.addAttribute("isValid", utility.isValidEmail(email));
+        return "email";
+    }
+
+    @RequestMapping("/useful/encode/{text}/{number}")
+    public String encodeText(@PathVariable(value = "text") String text, @PathVariable(value = "number") int number, Model model) {
+        model.addAttribute("text", utility.caesar(text, number));
+        return "caesar";
+    }
+
+    @RequestMapping("/useful/decode/{text}/{number}")
+    public String decodeText(@PathVariable(value = "text") String text, @PathVariable(value = "number") int number, Model model) {
+        model.addAttribute("text", utility.caesar(text, -number));
+        return "caesar";
+    }
 
 
 
