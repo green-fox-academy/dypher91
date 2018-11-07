@@ -30,6 +30,7 @@ public class Exercise2Application implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         printer.log(color.printColor());
+        printer.log("hello PABLOS");
 
 
     }
