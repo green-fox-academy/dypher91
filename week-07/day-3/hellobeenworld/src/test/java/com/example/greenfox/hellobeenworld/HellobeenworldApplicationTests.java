@@ -1,4 +1,4 @@
-package com.greenfox.dypher.day3;
+package com.example.greenfox.hellobeenworld;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class Day3ApplicationTests {
+public class HellobeenworldApplicationTests {
 
     @Test
     public void contextLoads() {
