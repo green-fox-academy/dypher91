@@ -13,7 +13,7 @@ public class HellobeenworldApplication implements CommandLineRunner {
     public static void main(String[] args) {
         SpringApplication.run(HellobeenworldApplication.class, args);
     }
-    
+
 
     @Override
     public void run(String... args) throws Exception {
