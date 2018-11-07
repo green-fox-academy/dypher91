@@ -12,7 +12,6 @@ public class UtilityController {
     @Autowired
     Utility utility;
 
-
     @RequestMapping("/useful")
     public String useful(Model model) {
         model.addAttribute("colors", utility.getUtilities());
