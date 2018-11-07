@@ -1,4 +1,5 @@
 package com.example.greenfox.exercise2;
 
-public class MyColor {
+public interface MyColor {
+     String printColor();
 }
