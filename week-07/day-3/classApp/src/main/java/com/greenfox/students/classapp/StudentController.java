@@ -1,13 +1,16 @@
 package com.greenfox.students.classapp;
 
-import com.greenfox.students.classapp.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.Arrays;
+import java.util.List;
+
 @Controller
 public class StudentController {
+
     @Autowired
     StudentService studentService;
 
@@ -19,7 +22,7 @@ public class StudentController {
 
     @RequestMapping("/gfa/list")
     public String listNames(Model model){
-        model.addAttribute("names", studentService.findAll());
-        return "info";
+        model.addAttribute("namesList", studentService.findAll());
+        return "liststudent";
     }
 }

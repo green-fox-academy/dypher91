@@ -1,4 +1,4 @@
-package com.greenfox.students.classapp.service;
+package com.greenfox.students.classapp;
 
 import org.springframework.stereotype.Service;
 
