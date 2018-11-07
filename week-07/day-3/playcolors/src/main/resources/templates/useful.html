@@ -5,8 +5,7 @@
     <link rel="stylesheet" th:href="@{/style.css}"/>
     <meta charset="utf-8"/>
 </head>
-<body th:style="|'background-color:'*{randColor}|">
-<h1>All colors</h1>
+<body >
 <table>
     <tbody >
     <tr th:each="color : ${colors}">
@@ -16,14 +15,5 @@
     </tr>
     </tbody>
 </table>
-<!--<br>-->
-<!--<a href="/useful/email?email=is@this.valid">Valid email example</a>-->
-<!--</br>-->
-<!--<br>-->
-<!--<a href="/useful/encode/apple/1">Try the encoder with apple word, and number 1</a>-->
-<!--</br>-->
-<!--<br>-->
-<!--<a href="/useful/decode/apple/1">Try the decoder with apple word, and number 1</a>-->
-<!--</br>-->
 </body>
 </html>

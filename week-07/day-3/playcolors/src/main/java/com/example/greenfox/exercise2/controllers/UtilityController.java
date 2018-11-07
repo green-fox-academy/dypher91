@@ -28,9 +28,8 @@ public class UtilityController {
 
     @RequestMapping("/useful/colored")
         public String randomColor (Model model) {
-            model.addAttribute("colors", utility.getUtilities());
             model.addAttribute("randColor", utility.randomColor());
-            return "useful";
+            return "randBackground";
         }
     @RequestMapping(value = "/useful/email")
     public String email(@RequestParam(value = "email") String email, Model model) {
