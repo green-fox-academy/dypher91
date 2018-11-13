@@ -1,13 +1,10 @@
 package com.greenfox.dypher.todo.model;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 
 @Entity
+@Table(name = "todos")
 public class Todo {
 
     @Id
@@ -22,6 +19,8 @@ public class Todo {
 
     public Todo(String title) {
         this.title = title;
+        this.urgent = false;
+        this.done =false;
     }
 
     public long getId() {

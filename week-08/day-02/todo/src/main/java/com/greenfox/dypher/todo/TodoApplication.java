@@ -22,7 +22,7 @@ public class TodoApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        todoRepository.save(new Todo(("I have to learn Object Relational Mapping")));
-        todoRepository.save(new Todo(("I have to learn what I am doing")));
+//        todoRepository.save(new Todo(("I have to learn Object Relational Mapping")));
+//        todoRepository.save(new Todo(("I have to learn what I am doing")));
     }
 }
