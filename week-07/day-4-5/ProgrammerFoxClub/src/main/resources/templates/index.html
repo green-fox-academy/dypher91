@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>GFA</title>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+    <meta charset="utf-8"/>
+</head>
+<body >
+
+<br>
+<ul>
+    <li><a href=index.html>Information</a></li>
+</ul>
+<img src="greenfox.png">
+
+<p th:text="'This is ' + ${fox.name} + '. Currently living on ' + ${fox.favoriteFood} + ' and ' + ${fox.favoriteDrink} + '. He knows '+${fox.getNumberOfLearntTricks()}+' trick(s).'"></p>
+
+<h1>Known tricks</h1>
+<ul>
+    <li> trick1 </li>
+    <li> trick2 </li>
+</ul>
+
+<div th:switch="${fox.getNumberOfLearntTricks() != 0}" }>
+    <p th:case="false">It's a little fox baby, does not know any tricks.</p>
+    <div th:case="true">
+        <ul th:each="oneTrick : ${fox.getLearntTricks()}">
+            <li>
+                <p th:text="${oneTrick}"></p>
+            </li>
+        </ul>
+    </div>
+
+
+
+</div>
+</body>
+</html>

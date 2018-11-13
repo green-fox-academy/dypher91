@@ -1,15 +1,27 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Utilities</title>
+    <title>GFA</title>
     <link rel="stylesheet" th:href="@{/style.css}"/>
     <meta charset="utf-8"/>
 </head>
 <body >
-<br>
-<li><a href="/info">Information</a></li>
 
+<br>
+<ul>
+<li><a href="/info">Information</a></li>
+</ul>
 <img src="greenfox.png">
+
+<!--<p th:text="'This is '+${name} +'. Currently living on '+ ${food}+ ' and ' +${drink}'.'+' He knows '+ ${trick}+' trincks.'">So there will be some text</p>-->
+<h1>Known tricks</h1>
+<ul>
+<li> trick1 </li>
+<li> trick2 </li>
+</ul>
+
+
+
 </br>
 </body>
 </html>

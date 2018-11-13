@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>GFA</title>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+    <meta charset="utf-8"/>
+</head>
+<body >
+<h1>Welcome to Programmer Fox Club!</h1>
+
+<p th:style="'color:red;'">Please provide a name, so you can associate it to your pet!</p>
+
+<form action="/login" method="post">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="foxname">
+    <button type="submit">GO</button>
+</form>
+
+</body>
+</html>

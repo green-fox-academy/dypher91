@@ -1,4 +1,4 @@
-package com.greenfox.foxclub.dypher.programmerfoxclub;
+package com.greenfox.foxclub.dypher.programmerfoxclub.controllers;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

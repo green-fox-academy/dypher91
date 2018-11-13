@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Fox Nutrition</title>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+    <meta charset="utf-8"/>
+</head>
+<body>
+<!--<ul>-->
+    <!--<li><a href=information.html>Information</a></li>-->
+    <!--<li><a th:href="'nutritionStore?name=' + ${fox.getName()}">Nutrition Store</a></li>-->
+    <!--<li><a th:href="@{'/trickCenter?name=' + ${fox.getName()}}">Trick Center</a></li>-->
+    <!--<li><a th:href="@{'/actionHistory?name=' + ${fox.getName()}}">Action History</a></li>-->
+<!--</ul>-->
+<form method="post">
+    <label for="trick">Tricks</label>
+    <select name="trick">
+        <option id="trick" th:each="trick : ${trickPossibilities.getTrickOptions} " th:value="${trick}" th:text="${trick}"></option>
+    </select>
+    <input type="submit">
+</form>
+</body>
+</html>
