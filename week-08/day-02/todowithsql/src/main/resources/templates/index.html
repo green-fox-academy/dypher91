@@ -6,51 +6,58 @@
     <title>Todo List</title>
 </head>
 <body>
-<div class="container" align="center">
-    <h1>Todos:</h1>
-</div>
-<div class="container">
-    <ul class="nav">
-        <a class="nav-item" th:href="@{'/addT'}">Add Todo</a>
-    </ul>
-</div>
-<div class="container-fluid">
+<h1 class="content" th:align="center">My Todos</h1>
+<div class="container-fluid" th:align="center">
     <table class="table-striped table-hover">
-        <thead class="thead-dark">
+        <thead class="thead-dark" >
         <th style="width: 5%">ID</th>
-        <th style="width: 65%">Title</th>
-        <th style="width: 5%">Urgent</th>
-        <th style="width: 5%">Done</th>
-        <th style="width: 10%"></th>
-        <th style="width: 10%"></th>
+        <th style="width: 63%">Title</th>
+        <th style="width: 7%">Urgent</th>
+        <th style="width: 7%">Done</th>
+        <th style="width: 10%">Edit</th>
+        <th style="width: 10%">Delete</th>
         </thead>
+
         <tr th:each="Todo, iterNum : ${Todos}">
-            <th th:text="*{iterNum.count}">ID</th>
-            <th th:text="*{Todo.title}" th:style="${Todo.isDone} ?  'color : green' : 'color : black'">Title</th>
-            <th th:text="*{Todo.isUrgent}">isUrgent</th>
-            <th th:text="*{Todo.isDone}" >isDone</th>
-            <th>
+            <td th:text="*{iterNum.count}">ID</td>
+            <td> <a th:href="@{'/{id}/info'(id=${Todo.id})}" th:text="${Todo.title}" th:style="${Todo.isDone} ?  'color : green' : 'color : black'"> </a></td>
+            <td th:text="*{Todo.isUrgent}">isUrgent</td>
+            <td th:text="*{Todo.isDone}" >isDone</td>
+            <td>
                 <a th:href="@{'/{id}/edit'(id=${Todo.id})}">
                     <button class="btn btn-danger btn-sm" >Edit</button>
                 </a>
-            </th>
-            <th>
+            </td>
+            <td>
                 <a th:href="@{'/{id}/delete'(id=${Todo.id})}">
                     <button class="btn btn-primary btn-sm" >Delete</button>
                 </a>
-            </th>
+            </td>
         </tr>
+        <td>
+            <a class="nav-item" th:href="@{'/addT'}">
+                <button class="btn btn-primary btn-sm" >ADD</button>
+            </a>
+        </td>
+        <form class="navbar-form navbar-left" action="" th:action="@{'/list/search'}" method="get">
+            <td>
+            <input type="search" class="form-control" name="search" placeholder="Search"/>
+            </td>
+            <td>
+            <button class="btn btn-primary btn-sm" >Search</button>
+            </td>
+        </form>
 
     </table>
-</div>
-<!--<form th:action="@{/add}" th:object="${Todo}" method="post">-->
-    <!--<p> <input type="text" th:field="*{title}" />-->
-        <!--Urgent<input type="checkbox" th:field="*{isUrgent}" />-->
-        <!--Done<input type="checkbox" th:field="*{isDone}" />-->
-        <!--<input type="submit" value="Add todo" />-->
-    <!--</p>-->
-<!--</form>-->
 
+    <!--<div th:if="${Todo.isUrgent}">-->
+    <!--<td><span class="glyphicon glyphicon-ok" aria-hidden="false"></span></td>-->
+    <!--</div>-->
+    <!--&lt;!&ndash; ELSE &ndash;&gt;-->
+    <!--<div th:unless="${Todo.isUrgent}">-->
+    <!--<td></td>-->
+    <!--</div>-->
+</div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>

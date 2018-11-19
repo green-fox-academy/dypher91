@@ -5,13 +5,17 @@
     <title>Edit Todo</title>
 </head>
 <body>
+<ul>
+    <li><a th:href="@{/}">Return to homepage</a></li>
+</ul>
 <form th:action="@{/update}" th:object="${Todo}" method="post">
     <p> <input type="text" th:field="*{title}" />
         Urgent<input type="checkbox" th:field="*{isUrgent}" />
-        Done<input type="checkbox" th:field="*{isDone}" />
+        Done<input type="checkbox" th:field="*{isDone}" /></p>
+    <p>
+        <!--DueDate: <input type="date" th:field="*{dueDate}"/></p>-->
         <input type="submit" value="Update todo" />
         <input type="hidden" th:field="*{id}" />
-    </p>
 </form>
 </body>
 </html>

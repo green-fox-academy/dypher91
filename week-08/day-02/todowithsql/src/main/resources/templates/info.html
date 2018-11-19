@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Info task</title>
+</head>
+<ul>
+    <li><a th:href="@{/}">Return to homepage</a></li>
+</ul>
+<tr>
+    <ul>
+        <li>
+    <td th:each="Tod : ${Todo}">Description: </td>
+        <td th:text="${Todo.getDescription()}"></td>
+        </li>
+        <li>Created at:
+                <td th:text="${Todo.getCreatedAt()}"></td>
+        </li>
+        <li>DueDate at:
+            <td th:text="${Todo.getDueDate()}"></td>
+        </li>
+
+
+    </ul>
+</td>
+</tr>
+
+</body>
+</html>

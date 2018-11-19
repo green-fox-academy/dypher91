@@ -22,18 +22,24 @@ public class TodoController {
         return "index";
     }
 
-    @GetMapping("/addT")
-    public String input(Model model, @ModelAttribute Todo todo) {
-        model.addAttribute("Todo", todo);
-        return "addTask";
+        @GetMapping("/addT")
+        public String input(Model model, @ModelAttribute Todo todo) {
+            model.addAttribute("Todo", todo);
+            return "addTask";
+        }
+
+    @GetMapping("/{id}/info")
+    public String info(@PathVariable Long id, Model model) {
+        model.addAttribute("Todo", repo.findAllById(id));
+        return "info";
     }
 
-    @PostMapping("/add")
-    public String add (@ModelAttribute Todo todo){
+
+    @PostMapping("/addN")
+    public String addN (@ModelAttribute Todo todo){
         repo.save(todo);
         return "redirect:/";
     }
-
 
     @GetMapping("/{id}/edit")
     public String edit(@PathVariable Long id, Model model) {
@@ -45,8 +51,8 @@ public class TodoController {
     public String update(@RequestParam("id") Long id,
                          @RequestParam("title") String title,
                          @RequestParam(value = "isUrgent", required = false) boolean urgent,
-                         @RequestParam(value = "isDone", required = false) boolean done) {
-        Todo todo = (Todo) repo.findAllById(id);
+                         @RequestParam(value = "isDone", required = false) boolean done){
+        Todo todo = repo.findAllById(id);
         todo.setTitle(title);
         todo.setIsDone(done);
         todo.setIsUrgent(urgent);
@@ -54,9 +60,11 @@ public class TodoController {
         return "redirect:/";
     }
 
+
     @GetMapping("/{id}/delete")
     public String delete(@PathVariable Long id) {
         repo.deleteById(id);
         return "redirect:/";
     }
+
 }
