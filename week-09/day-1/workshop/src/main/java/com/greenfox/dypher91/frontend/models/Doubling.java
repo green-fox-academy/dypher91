@@ -5,7 +5,9 @@ public class Doubling {
     private Integer result;
 
     public Doubling(int received) {
+
         this.received = received;
+
     }
 
     public Integer getReceived() {

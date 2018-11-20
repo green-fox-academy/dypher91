@@ -16,6 +16,8 @@ public class RestController {
         if (input == null) {
             return error;
         }
+//        Doubling doublingg = mainService.doubleTheInput(input);
+//        mainService.createLog("/doubling", doublingg);
         Doubling doubling = new Doubling(input);
         doubling.setResult(input * 2);
 
