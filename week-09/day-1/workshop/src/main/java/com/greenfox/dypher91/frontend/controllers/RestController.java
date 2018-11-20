@@ -10,12 +10,6 @@ public class RestController {
     MainService mainService;
 
 
-//    @Autowired
-//    public RestController(MainService mainService) {
-//        this.mainService = mainService;
-//    }
-
-
     @RequestMapping(value = "/doubling", method = RequestMethod.GET, produces = "application/json")
     public Object doubleInput(@RequestParam(value = "input", required = false) Integer input) {
         ErrorResponse error = new ErrorResponse("Please provide an input!");
@@ -44,23 +38,19 @@ public class RestController {
     }
 
     @RequestMapping(value = "/appenda/{appendable}")
-    public Object appendLetterA(@PathVariable (value = "appendable")String appendable){
+    public Object appendLetterA(@PathVariable(value = "appendable") String appendable) {
         return new AppendA(appendable);
     }
 
     @PostMapping(value = "dountil/{action}")
-    public Object doUntilAction(@PathVariable (value = "action") String action, @RequestParam("until") Integer until){
-        Result result = new Result();
-        if (action.equals("sum")){
-            result.setSum(result.sumNumber(until));
-            System.out.println(until);
-//            mainService.sumTheUntil(until);
-        } else if (action.equals("factor")){
-            result.factoNumber(until);
-//            mainService.factorTheUntil(until);
-        }
-        return result;
-    }
+    public ResultNumber doUntil(@PathVariable String action, @RequestBody DoUntil doUntil) {
+    ResultNumber resultNumber = doUntil.getResult(action);
+        System.out.println(doUntil.getSum());
+        System.out.println(resultNumber.getResult());
+    return resultNumber;
+}
+
+
 }
 
 
