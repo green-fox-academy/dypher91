@@ -7,3 +7,5 @@
 >[TODO App](https://github.com/dypher91/todo-app)
 
 >[wanderer](https://github.com/dypher91/wanderer-java)
+
+>[p2p-chat](https://github.com/dypher91/p2p-chat)
